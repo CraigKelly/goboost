@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $SCRIPT_DIR/..
+
+TESTED=$(pwd)/.tested
+
+rm -f $TESTED
+go test -v -race -tags "test" $*
+touch $TESTED
