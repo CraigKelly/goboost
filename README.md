@@ -32,6 +32,28 @@ If you're looking for reference implementations of decision tree and boosting
 algorithms in pure Go, then you should probably look at
 [CloudForest](https://github.com/ryanbressler/CloudForest) instead.
 
+## Dependencies
+
+We build with Go 1.7. Earlier version might be fine, but we're not testing
+against them. The usual go commands (build, test, etc) should work fine.
+
+We use a Makefile and some helper bash scripts (in `./scripts`), so you will
+need GNU make and Bash to run those. That's no problem for Linux and Mac user,
+but if you are on Windows you need to do some extra work. Probably the best
+option at this point is the cool new Ubuntu on Windows 10 magic - as described
+in lots of places, including
+[here](http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/).
+
+## Build, test, run
+
+Running `make` will build and test goboost.
+
+`make clean` does what you expect.
+
+`make test` touches the file `.tested`
+
+`make cover` will run all tests with coverage and show the HTML report.
+
 ## References
 
 Coming - we'll add references as we implement the proper algorithms
